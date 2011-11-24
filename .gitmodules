@@ -18,3 +18,7 @@
 	path = bundle/yankring
 	url = git://github.com/vim-scripts/YankRing.vim.git
 	ignore = dirty
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = git://github.com/tpope/vim-surround.git
+	ignore = dirty
