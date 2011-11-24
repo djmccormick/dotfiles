@@ -10,3 +10,7 @@
 	path = bundle/nerdcommenter
 	url = git://github.com/scrooloose/nerdcommenter.git
 	ignore = dirty
+[submodule "bundle/molokai"]
+	path = bundle/molokai
+	url = git://github.com/vim-scripts/molokai.git
+	ignore = dirty
