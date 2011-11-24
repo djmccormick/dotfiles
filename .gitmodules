@@ -14,3 +14,7 @@
 	path = bundle/molokai
 	url = git://github.com/vim-scripts/molokai.git
 	ignore = dirty
+[submodule "bundle/yankring"]
+	path = bundle/yankring
+	url = git://github.com/vim-scripts/YankRing.vim.git
+	ignore = dirty
