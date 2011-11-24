@@ -6,3 +6,7 @@
 	path = bundle/vim-pastie
 	url = https://github.com/tpope/vim-pastie.git
 	ignore = dirty
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+	ignore = dirty
