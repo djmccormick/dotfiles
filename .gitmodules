@@ -22,3 +22,7 @@
 	path = bundle/surround
 	url = git://github.com/tpope/vim-surround.git
 	ignore = dirty
+[submodule "bundle/jellybeans"]
+	path = bundle/jellybeans
+	url = git://github.com/nanotech/jellybeans.vim.git
+	ignore = dirty
