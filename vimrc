@@ -6,7 +6,7 @@ call pathogen#infect()
 filetype plugin indent on
 syntax on
 
-" Theme¬
+" Theme:
 set background=dark
 color jellybeans
 
