@@ -1,7 +1,6 @@
 set nocompatible
 
 " Load pathogen:
-filetype off
 call pathogen#infect()
 filetype plugin indent on
 syntax on
