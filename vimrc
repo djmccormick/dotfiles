@@ -1,8 +1,14 @@
+set nocompatible
+
 " Load pathogen:
 filetype off
 call pathogen#infect()
 filetype plugin indent on
 syntax on
+
+" Theme¬
+set background=dark
+color jellybeans
 
 " Four space tabbing:
 set expandtab
@@ -10,32 +16,23 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-" Mark trailing white space:
-set list listchars=tab:›\ ,trail:·,eol:¬
-
-" Theme¬
-set t_Co=256¬
-colorscheme jellybeans
-syntax enable
-syntax on
-set background=dark
-" NERDTree:
+" NERDTree
 let g:NERDTreeWinSize = 35
 let NERDTreeShowBookmarks=1
 autocmd VimEnter * NERDTree ~/Websites/
 
+" Mark trailing white space:
+set list listchars=tab:›\ ,trail:·,eol:¬
 
 " Set the backups to go to a single folder instead of all over the place:
 set directory=~/.vim/swap
 set backupdir=~/.vim/backup
 
 " Basics:
-set nocompatible
 set bs=2
 set number
 set nowrap
-set smartindent
-set hlsearch
+"set hlsearch
 set incsearch
 set ignorecase
 set smartcase
