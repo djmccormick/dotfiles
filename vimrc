@@ -40,6 +40,9 @@ set wildmenu
 set shortmess=atI
 let mapleader = ","
 
+" Vim 7.3 and above supports the Mac OS X clipboard:
+set clipboard=unnamed
+
 " From http://items.sjbach.com/319/configuring-vim-right
 set hidden
 nnoremap ' `
