@@ -10,16 +10,11 @@ My personal vim configuration.
 
         $ git clone git://github.com/djmccormick/.vim.git
 
-3. Create our centralized swap and backup directories:
-
-        $ mkdir .vim/backup
-        $ mkdir .vim/swap
-
-4. Create a symlink for .vimrc.
+3. Create a symlink for .vimrc.
 
         $ ln -s .vim/vimrc .vimrc
 
-5. Load all submodules (vimscripts).
+4. Load all submodules (vimscripts).
 
         $ cd .vim
         $ git submodule init
