@@ -25,15 +25,12 @@ autocmd VimEnter * NERDTree ~/Websites/
 set list listchars=tab:›\ ,trail:·,eol:¬
 
 " Set the backups/undos/swaps to go to centralized locations:
-set directory=~/.vim/swap
-set backup
-set backupdir=~/.vim/backup
+set directory=~/.vim/swap//
 try
-    set undodir=~/.vim/undo
+    set undodir=~/.vim/undo//
     set undofile
 catch /Unknown option/
     " For versions of Vim prior to 7.3
-    " test
 endtry
 
 " Basics:
