@@ -103,3 +103,14 @@ autocmd BufReadPost * nested
       \   let b:reload_dos = 1 |
       \   e ++ff=dos |
       \ endif
+
+" Project-specific settings:
+au BufNewFile,BufRead *Websites/linkswapp-server/*   call s:linkswappserver_binds()
+
+function! s:linkswappserver_binds()
+  " Two space tabbing:
+  set expandtab
+  set tabstop=2
+  set softtabstop=2
+  set shiftwidth=2
+endfun
