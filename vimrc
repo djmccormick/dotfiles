@@ -16,11 +16,6 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-" NERDTree
-let g:NERDTreeWinSize = 35
-let NERDTreeShowBookmarks=1
-autocmd VimEnter * NERDTree ~/Websites/
-
 " Mark trailing white space:
 set list listchars=tab:›\ ,trail:·,eol:¬
 
@@ -45,6 +40,10 @@ set history=1000
 set wildmenu
 set shortmess=atI
 let mapleader = ","
+
+" NERDTree
+let NERDTreeShowBookmarks=1
+nmap <Leader>n :NERDTreeToggle<CR>
 
 " Vim 7.3 and above supports the Mac OS X clipboard:
 set clipboard=unnamed
