@@ -40,6 +40,7 @@ set history=1000
 set wildmenu
 set shortmess=atI
 let mapleader = ","
+set tildeop
 
 " NERDTree
 let NERDTreeShowBookmarks=1
