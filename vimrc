@@ -41,6 +41,9 @@ set wildmenu
 set shortmess=atI
 let mapleader = ","
 
+" Allow the . to execute once for each line of a visual selection
+vnoremap . :normal .<CR>
+
 " NERDTree
 let NERDTreeShowBookmarks=1
 nmap <Leader>n :NERDTreeToggle<CR>
