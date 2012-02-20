@@ -40,7 +40,6 @@ set history=1000
 set wildmenu
 set shortmess=atI
 let mapleader = ","
-set tildeop
 
 " NERDTree
 let NERDTreeShowBookmarks=1
@@ -74,10 +73,10 @@ au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.jade set filetype=html
 
 " MiniBuffExplorer options:
-let g:miniBufExplMapWindowNavVim = 1 
-let g:miniBufExplMapWindowNavArrows = 1 
-let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplModSelTarget = 1
 
 " http://vim.wikia.com/wiki/Format_your_xml_document_using_xmllint
 " Allow for pretty-printing of XML:
