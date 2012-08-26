@@ -110,6 +110,15 @@ autocmd BufReadPost * nested
 au BufEnter *Projects/linkswapp-server/* call s:linkswappserver_binds()
 au BufEnter *Projects/linkswapp-chrome/* call s:linkswappchrome_binds()
 au BufEnter *Projects/djmccormick/* call s:djmccormick_binds()
+au BufEnter *Projects/timesup/* call s:timesup_binds()
+
+function! s:timesup_binds()
+  " Two space tabbing:
+  set expandtab
+  set tabstop=2
+  set softtabstop=2
+  set shiftwidth=2
+endfun
 
 function! s:linkswappserver_binds()
   " Two space tabbing:
