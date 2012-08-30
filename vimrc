@@ -81,10 +81,8 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1
 let g:miniBufExplModSelTarget = 1
 
-" http://vim.wikia.com/wiki/Format_your_xml_document_using_xmllint
-" Allow for pretty-printing of XML:
-vmap <Leader>px !XMLLINT_INDENT='    ' xmllint --format -<CR>
-nmap <Leader>px !!XMLLINT_INDENT='    ' xmllint --format -<CR>
+" statusline
+set statusline=%<\ %n:%f\ %m%r%y%=%(Line\ %l/%L:%c%V%)
 
 " http://vim.wikia.com/wiki/Modeline_magic
 " Append modeline after last line in buffer.
