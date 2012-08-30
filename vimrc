@@ -63,7 +63,7 @@ nnoremap <space> za
 " Hide buffer when not in window (to prevent relogin with FTP edit)
 set bufhidden=hide
 
-" Have 3 lines of offset (or buffer) when scrolling
+" Have 5 lines of offset (or buffer) when scrolling
 set scrolloff=5
 
 " Set filetypes:
@@ -86,8 +86,6 @@ set statusline=%<\ %n:%f\ %m%r%y%=%(Line\ %l/%L:%c%V%)
 
 " http://vim.wikia.com/wiki/Modeline_magic
 " Append modeline after last line in buffer.
-" Use substitute() instead of printf() to handle '%%s' modeline in LaTeX
-" files.
 function! AppendModeline()
   let l:modeline = printf(" vim: set ts=%d sw=%d tw=%d :",
         \ &tabstop, &shiftwidth, &textwidth)
@@ -96,21 +94,13 @@ function! AppendModeline()
 endfunction
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
-" http://vim.wikia.com/wiki/Automatically_reload_files_with_mixed_line-endings_in_DOS_fileformat
-" Automatically converts all dos line endings to unix line endings.
-autocmd BufReadPost * nested
-      \ if !exists('b:reload_dos') && !&binary && &ff=='unix' && (0 < search('\r$', 'nc')) |
-      \   let b:reload_dos = 1 |
-      \   e ++ff=dos |
-      \ endif
-
 " Project-specific settings:
-au BufEnter *Projects/linkswapp-server/* call s:linkswappserver_binds()
-au BufEnter *Projects/linkswapp-chrome/* call s:linkswappchrome_binds()
-au BufEnter *Projects/djmccormick/* call s:djmccormick_binds()
-au BufEnter *Projects/timesup/* call s:timesup_binds()
+au BufEnter *Projects/linkswapp-server/* call s:two_tab()
+au BufEnter *Projects/linkswapp-chrome/* call s:two_tab()
+au BufEnter *Projects/djmccormick/* call s:two_tab()
+au BufEnter *Projects/timesup/* call s:two_tab()
 
-function! s:timesup_binds()
+function! s:two_tab()
   " Two space tabbing:
   set expandtab
   set tabstop=2
@@ -118,26 +108,11 @@ function! s:timesup_binds()
   set shiftwidth=2
 endfun
 
-function! s:linkswappserver_binds()
-  " Two space tabbing:
-  set expandtab
-  set tabstop=2
-  set softtabstop=2
-  set shiftwidth=2
+" Fix janky files
+function! FixJanky()
+  %s/\r//ge " Remove DOS line endings
+  %s/\s\+$//e " Remove trailing whitespace
+  retab " Fix mixed tabs and spaces
+  call feedkeys("\<C-o>")
 endfun
-
-function! s:linkswappchrome_binds()
-  " Two space tabbing:
-  set expandtab
-  set tabstop=2
-  set softtabstop=2
-  set shiftwidth=2
-endfun
-
-function! s:djmccormick_binds()
-  " Two space tabbing:
-  set expandtab
-  set tabstop=2
-  set softtabstop=2
-  set shiftwidth=2
-endfun
+nnoremap <silent> <Leader>f :call FixJanky()<CR>
