@@ -31,6 +31,6 @@
     url = git://github.com/fholgado/minibufexpl.vim.git
     ignore = dirty
 [submodule "bundle/snipmate"]
-	path = bundle/snipmate
-	url = git://github.com/msanders/snipmate.vim.git
+    path = bundle/snipmate
+    url = git://github.com/msanders/snipmate.vim.git
     ignore = dirty
