@@ -34,3 +34,9 @@
     path = bundle/snipmate
     url = git://github.com/msanders/snipmate.vim.git
     ignore = dirty
+[submodule "bundle/ctrlp"]
+    path = bundle/ctrlp
+    url = git://github.com/kien/ctrlp.vim.git
+[submodule "bundle/jshint"]
+    path = bundle/jshint
+    url = git://github.com/walm/jshint.vim.git

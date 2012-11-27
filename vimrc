@@ -48,6 +48,12 @@ vnoremap . :normal .<CR>
 let NERDTreeShowBookmarks=1
 nmap <Leader>n :NERDTreeToggle<CR>
 
+" JSHint
+nmap <Leader>j :JSHint<CR>
+
+" CtrlP
+nmap <Leader>p :CtrlP<CR>
+
 " Vim 7.3 and above supports the Mac OS X clipboard:
 set clipboard=unnamed
 
