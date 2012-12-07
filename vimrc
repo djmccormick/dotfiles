@@ -100,6 +100,9 @@ function! AppendModeline()
 endfunction
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
+" Ctrl+P
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/package/*
+
 " Project-specific settings:
 au BufEnter *Projects/linkswapp-server/* call s:two_tab()
 au BufEnter *Projects/linkswapp-chrome/* call s:two_tab()
