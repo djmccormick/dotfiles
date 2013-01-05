@@ -104,16 +104,18 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/package/*
 
 " Project-specific settings:
-au BufEnter *Projects/linkswapp-server/* call s:two_tab()
-au BufEnter *Projects/linkswapp-chrome/* call s:two_tab()
-au BufEnter *Projects/djmccormick/* call s:two_tab()
-au BufEnter *Projects/timesup/* call s:two_tab()
+au BufEnter *Projects/FuelUX2/* call s:real_tab()
+
+function! s:real_tab()
+  " Two space tabbing:
+  set noexpandtab
+endfun
 
 function! s:two_tab()
   " Two space tabbing:
   set expandtab
-  set tabstop=2
-  set softtabstop=2
+  set tabstop=4
+  set softtabstop=4
   set shiftwidth=2
 endfun
 
