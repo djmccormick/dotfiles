@@ -1,5 +1,8 @@
 set nocompatible
 
+" Scroll around cursor line:
+let &scrolloff=999-&scrolloff
+
 " Load pathogen:
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
