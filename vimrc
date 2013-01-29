@@ -104,7 +104,7 @@ endfunction
 nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
 " Ctrl+P
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/package/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/package/Package/*
 
 " Project-specific settings:
 au BufEnter *Projects/FuelUX2/* call s:real_tab()
