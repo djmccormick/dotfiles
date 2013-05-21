@@ -107,7 +107,9 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/package/Package/*
 
 " Project-specific settings:
+au BufEnter *Projects/FuelUX/* call s:real_tab()
 au BufEnter *Projects/FuelUX2/* call s:real_tab()
+au BufEnter *Projects/fuelux-imhtheme/* call s:real_tab()
 
 function! s:real_tab()
   " Two space tabbing:
