@@ -4,8 +4,8 @@ set nocompatible
 let &scrolloff=999-&scrolloff
 
 " Load pathogen:
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+source bundle/vim-pathogen/autoload/pathogen.vim
+call pathogen#infect('~/.vim/bundle')
 filetype plugin indent on
 syntax on
 
