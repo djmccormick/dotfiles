@@ -109,7 +109,11 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/package/Package/*,*
 " Project-specific settings:
 au BufEnter *Projects/FuelUX/* call s:real_tab()
 au BufEnter *Projects/FuelUX2/* call s:real_tab()
+au BufEnter *Projects/FuelUX2Andy/* call s:real_tab()
 au BufEnter *Projects/fuelux-imhtheme/* call s:real_tab()
+au BufEnter *Projects/AmpscriptEditor/* call s:real_tab()
+au BufEnter *Projects/grunt-golddb/* call s:two_tab()
+au BufEnter *Projects/AddContact/* call s:real_tab()
 
 function! s:real_tab()
   " Two space tabbing:
