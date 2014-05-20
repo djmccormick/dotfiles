@@ -13,12 +13,6 @@ syntax on
 set background=dark
 color jellybeans
 
-" Four space tabbing:
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-
 " Mark trailing white space:
 set list listchars=tab:›\ ,trail:·,eol:¬
 
@@ -105,28 +99,6 @@ nnoremap <silent> <Leader>ml :call AppendModeline()<CR>
 
 " Ctrl+P
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/node_modules/*,*/package/Package/*,*/dist/*
-
-" Project-specific settings:
-au BufEnter *Projects/FuelUX/* call s:real_tab()
-au BufEnter *Projects/FuelUX2/* call s:real_tab()
-au BufEnter *Projects/FuelUX2Andy/* call s:real_tab()
-au BufEnter *Projects/fuelux-imhtheme/* call s:real_tab()
-au BufEnter *Projects/AmpscriptEditor/* call s:real_tab()
-au BufEnter *Projects/grunt-golddb/* call s:two_tab()
-au BufEnter *Projects/AddContact/* call s:real_tab()
-
-function! s:real_tab()
-  " Two space tabbing:
-  set noexpandtab
-endfun
-
-function! s:two_tab()
-  " Two space tabbing:
-  set expandtab
-  set tabstop=4
-  set softtabstop=4
-  set shiftwidth=2
-endfun
 
 " Fix janky files
 function! FixJanky()
