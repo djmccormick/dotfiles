@@ -1,5 +1,10 @@
 set nocompatible
 
+" 256 colors
+let base16colorspace=256  " Access colors present in 256 colorspace
+set t_Co=256
+set background=dark
+
 " Scroll around cursor line:
 let &scrolloff=999-&scrolloff
 
@@ -11,10 +16,17 @@ syntax on
 
 " Theme:
 set background=dark
-color jellybeans
+color base16-default
 
 " Mark trailing white space:
 set list listchars=tab:›\ ,trail:·,eol:¬
+
+" Indentation settings
+set tabstop=4 "Sets display width of tabs
+set shiftwidth=4 "Sets indentation width
+set autoindent "Turns on auto-indenting
+set smartindent "Remembers previous indent when creating new lines
+set noexpandtab "Real tabs
 
 " Set the backups/undos/swaps to go to centralized locations:
 set directory=~/.vim/swap//
@@ -71,10 +83,7 @@ set scrolloff=5
 
 " Set filetypes:
 au BufNewFile,BufRead *.php set filetype=php
-au BufNewFile,BufRead *.htm set filetype=php
-au BufNewFile,BufRead *.html set filetype=php
-au BufNewFile,BufRead *.inc set filetype=php
-au BufNewFile,BufRead *.view set filetype=php
+au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.jade set filetype=html
 
