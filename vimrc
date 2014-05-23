@@ -1,10 +1,5 @@
 set nocompatible
 
-" 256 colors
-let base16colorspace=256  " Access colors present in 256 colorspace
-set t_Co=256
-set background=dark
-
 " Scroll around cursor line:
 let &scrolloff=999-&scrolloff
 
@@ -15,8 +10,11 @@ filetype plugin indent on
 syntax on
 
 " Theme:
+"let base16colorspace=256  " Access colors present in 256 colorspace
+"set t_Co=256
 set background=dark
-color base16-default
+color base16-twilight
+"color jellybeans
 
 " Mark trailing white space:
 set list listchars=tab:›\ ,trail:·,eol:¬
