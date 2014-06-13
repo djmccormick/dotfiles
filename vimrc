@@ -13,8 +13,8 @@ syntax on
 "let base16colorspace=256  " Access colors present in 256 colorspace
 "set t_Co=256
 set background=dark
-color base16-twilight
-"color jellybeans
+"color base16-twilight
+color jellybeans
 
 " Mark trailing white space:
 set list listchars=tab:›\ ,trail:·,eol:¬
