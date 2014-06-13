@@ -80,8 +80,6 @@ set bufhidden=hide
 set scrolloff=5
 
 " Set filetypes:
-au BufNewFile,BufRead *.php set filetype=php
-au BufNewFile,BufRead *.less set filetype=css
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.jade set filetype=html
 
