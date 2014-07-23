@@ -114,6 +114,13 @@ function! FixJanky()
 endfun
 nnoremap <silent> <Leader>f :call FixJanky()<CR>
 
+" Format JSON
+function! DoFormatJSON()
+  :%!python -m json.tool
+endfunction
+command! FormatJSON call DoFormatJSON()
+nnoremap <silent> <Leader>o :call DoFormatJSON()<CR>
+
 " Format XML:
 function! DoPrettyXML()
   " save the filetype so we can restore it later
@@ -144,3 +151,22 @@ function! DoPrettyXML()
 endfunction
 command! PrettyXML call DoPrettyXML()
 nnoremap <silent> <Leader>x :call DoPrettyXML()<CR>
+
+" Project-specific settings:
+au BufEnter *Projects/teradata/ng-teradata/* call s:four_tab()
+
+function! s:two_tab()
+  " Two space tabbing:
+  set expandtab
+  set tabstop=4
+  set softtabstop=4
+  set shiftwidth=2
+endfun
+
+function! s:four_tab()
+  " Four space tabbing:
+  set expandtab
+  set tabstop=4
+  set softtabstop=4
+  set shiftwidth=4
+endfun
