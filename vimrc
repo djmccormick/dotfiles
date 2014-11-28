@@ -154,6 +154,7 @@ nnoremap <silent> <Leader>x :call DoPrettyXML()<CR>
 
 " Project-specific settings:
 au BufEnter *Projects/teradata/ng-teradata/* call s:four_tab()
+au BufEnter *Projects/forge.sh/node-oauth2-provider/* call s:two_tab()
 
 function! s:two_tab()
   " Two space tabbing:
@@ -170,3 +171,6 @@ function! s:four_tab()
   set softtabstop=4
   set shiftwidth=4
 endfun
+
+" JsDoc
+let g:jsdoc_allow_input_prompt = 1
