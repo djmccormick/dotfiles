@@ -26,6 +26,15 @@ set autoindent "Turns on auto-indenting
 set smartindent "Remembers previous indent when creating new lines
 set noexpandtab "Real tabs
 
+" Ctrl+P
+if exists("g:ctrl_user_command")
+	unlet g:ctrlp_user_command
+endif
+
+let g:ctrlp_custom_ignore = {
+	\ 'dir':  '\v[\/](node_modules|reports|test|dist|src/libraries)$'
+\ }
+
 " Set the backups/undos/swaps to go to centralized locations:
 set directory=~/.vim/swap//
 try
@@ -153,7 +162,6 @@ command! PrettyXML call DoPrettyXML()
 nnoremap <silent> <Leader>x :call DoPrettyXML()<CR>
 
 " Project-specific settings:
-au BufEnter *Projects/teradata/ng-teradata/* call s:four_tab()
 au BufEnter *Projects/forge.sh/node-oauth2-provider/* call s:two_tab()
 
 function! s:two_tab()
