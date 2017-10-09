@@ -3,6 +3,10 @@ set nocompatible
 " Scroll around cursor line:
 let &scrolloff=999-&scrolloff
 
+" vim-prettier
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.css,*.less,*.scss,*.json,*.graphql PrettierAsync
+
 " Load pathogen:
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
@@ -64,9 +68,6 @@ vnoremap . :normal .<CR>
 let NERDTreeShowBookmarks=1
 nmap <Leader>n :NERDTreeToggle<CR>
 
-" JSHint
-nmap <Leader>j :JSHint<CR>
-
 " CtrlP
 nmap <Leader>p :CtrlP<CR>
 
@@ -91,6 +92,22 @@ set scrolloff=5
 " Set filetypes:
 au BufNewFile,BufRead *.ejs set filetype=html
 au BufNewFile,BufRead *.jade set filetype=html
+
+" vim-jsx
+let g:jsx_ext_required = 0
+
+" Syntastic
+nmap <Leader>m :SyntasticCheck<CR>
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_mode_map = { 'mode': 'passive' }
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+let g:syntastic_javascript_checkers = ['eslint']
 
 " MiniBuffExplorer options:
 let g:miniBufExplMapWindowNavVim = 1

@@ -58,3 +58,12 @@
 [submodule "bundle/vim-tmux-navigator"]
 	path = bundle/vim-tmux-navigator
 	url = git@github.com:christoomey/vim-tmux-navigator.git
+[submodule "bundle/vim-prettier"]
+	path = bundle/vim-prettier
+	url = git@github.com:prettier/vim-prettier.git
+[submodule "bundle/vim-syntastic"]
+	path = bundle/vim-syntastic
+	url = git@github.com:vim-syntastic/syntastic.git
+[submodule "bundle/syntastic-local-eslint"]
+	path = bundle/syntastic-local-eslint
+	url = git@github.com:mtscout6/syntastic-local-eslint.vim.git
