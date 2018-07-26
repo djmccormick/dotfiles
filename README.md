@@ -1,8 +1,8 @@
 # .vim
 
-My personal vim configuration.
+My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-plug).
 
-## Getting Started
+### Installation
 
 1. If you have your own `.vim/` or `.vimrc` then back them up to a new location.
 
