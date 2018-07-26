@@ -4,12 +4,13 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
-Plug 'taohex/lightline-buffer'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'taohex/lightline-buffer'
+Plug 'tpope/vim-sensible'
 call plug#end()
 
 " Files
@@ -22,24 +23,19 @@ let mapleader = ","
 set bs=2
 set clipboard=unnamed
 set hidden
-set history=1000
 set ignorecase
-set incsearch
 set nowrap
 set number
 set scrolloff=5
 set smartcase
-set wildmenu
 
 " Indentation
 set tabstop=4
 set shiftwidth=4
-set autoindent
 set smartindent
 set noexpandtab
 
 " Visual
-syntax on
 set list listchars=tab:›\ ,trail:·,eol:¬
 set termguicolors
 set background=dark
@@ -58,7 +54,7 @@ nmap <Leader>n :NERDTreeToggle<CR>
 " Ctrl+P
 let g:ctrlp_working_path_mode='rw'
 let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/](node_modules|dist|build)$'
+	\ 'dir':  '\v[\/](node_modules|dist|build|.next)$'
 \ }
 
 " Lightline
