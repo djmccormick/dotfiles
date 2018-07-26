@@ -1,6 +1,6 @@
 # .vim
 
-My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-plug).
+My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-plug) and based on [vim-sensible](https://github.com/tpope/vim-sensible).
 
 ### Installation
 
