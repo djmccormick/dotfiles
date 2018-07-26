@@ -10,6 +10,11 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 
         $ git clone git://github.com/djmccormick/.vim.git ~/Projects
 
+3. Create `swap` and `undo` directories:
+
+        $ mkdir ~/Projects/.vim/swap
+        $ mkdir ~/Projects/.vim/undo
+
 3. Create a symlink for `.vim` and `.vimrc`:
 
         $ cd ~
