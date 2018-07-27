@@ -48,7 +48,6 @@ color jellybeans
 
 " NERDTree
 let g:NERDTreeChDirMode=2
-let NERDTreeShowBookmarks=1
 nmap <Leader>n :NERDTreeToggle<CR>
 
 " Ctrl+P
