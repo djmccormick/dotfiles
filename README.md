@@ -18,7 +18,7 @@ git clone git://github.com/djmccormick/.vim.git ~
 mkdir ~/.vim/swap ~/.vim/undo
 ```
 
-3. Create a symlink for `.vim` and `.vimrc`:
+3. Create a symlink for `.vimrc`:
 
 ```shell
 ln -s ~/Projects/.vim/vimrc ~/.vimrc

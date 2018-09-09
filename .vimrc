@@ -4,6 +4,7 @@ set nocompatible
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
+Plug 'leafgarland/typescript-vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
