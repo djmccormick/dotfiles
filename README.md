@@ -6,22 +6,22 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 
 1. If you have your own `.vim/` or `.vimrc` then back them up to a new location.
 
-2. Use git to clone this project:
+1. Use git to clone this project:
 
 ```shell
 git clone git://github.com/djmccormick/.vim.git ~
 ```
 
-3. Create `swap` and `undo` directories:
+1. Create a symlinks for `.vim` and `.vimrc`:
+
+```shell
+ln -s ~/Projects/.vim ~/.vim
+ln -s ~/Projects/.vim/.vimrc ~/.vimrc
+```
+1. Create `swap` and `undo` directories:
 
 ```shell
 mkdir ~/.vim/swap ~/.vim/undo
 ```
 
-3. Create a symlink for `.vimrc`:
-
-```shell
-ln -s ~/Projects/.vim/vimrc ~/.vimrc
-```
-
-4. Load all the plugins by opening vim, typing `:PlugInstall`, and then restarting vim.
+4. Load up vim, which should automatically download `vim-plug`. Once loaded, install all the plugins by typing `:PlugInstall`, and then restart vim.
