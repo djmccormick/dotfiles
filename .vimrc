@@ -15,7 +15,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
-Plug 'taohex/lightline-buffer'
+Plug 'taohexxx/lightline-buffer'
 Plug 'tpope/vim-sensible'
 call plug#end()
 
