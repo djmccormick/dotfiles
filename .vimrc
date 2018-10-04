@@ -6,6 +6,7 @@ if empty(glob('~/.vim/autoload/plug.vim'))
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
@@ -33,6 +34,7 @@ set nowrap
 set number
 set scrolloff=5
 set smartcase
+set mouse=a
 
 " Indentation
 set tabstop=4
@@ -56,16 +58,16 @@ let g:NERDTreeChDirMode=2
 nmap <Leader>n :NERDTreeToggle<CR>
 
 " Ctrl+P
-let g:ctrlp_working_path_mode='rw'
+let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/](node_modules|dist|build|.next)$'
+	\ 'dir':  '\v[\/](.git|.hg|.svn|.next|node_modules|dist|build)$'
 \ }
 
 " Lightline
 set noshowmode
 set laststatus=2
 let g:lightline = {
-	\ 'colorscheme': 'jellybeans',
+	\ 'colorscheme': 'jellybeans'
 \ }
 
 " Lightline Buffer
@@ -93,7 +95,7 @@ let g:lightline = {
     \ 'component': {
     \   'separator': '',
     \ },
-    \ }
+\ }
 let g:lightline_buffer_logo = ''
 let g:lightline_buffer_readonly_icon = ''
 let g:lightline_buffer_modified_icon = '✭'
