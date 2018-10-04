@@ -23,3 +23,7 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
    ```
 
 1. Load up vim, which should automatically download `vim-plug`. Once loaded, install all the plugins by typing `:PlugInstall`, and then restart vim.
+
+### Additional setup
+
+If you have [The Silver Searcher](ggreer/the_silver_searcher) (also known as `ag`) installed, it'll be used by Ctrl+P and ack.vim for searches. It makes both work faster, so I recommend it.
