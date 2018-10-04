@@ -2,21 +2,23 @@ set nocompatible
 
 " Plugins
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+	silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+		\ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maxmellon/vim-jsx-pretty'
+Plug 'mileszs/ack.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'taohexxx/lightline-buffer'
 Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-sleuth'
 call plug#end()
 
 " Files
@@ -36,11 +38,14 @@ set scrolloff=5
 set smartcase
 set mouse=a
 
-" Indentation
+" Indentation defaults (does not override vim-sleuth's indenting detection)
 set tabstop=4
-set shiftwidth=4
-set smartindent
-set noexpandtab
+if get(g:, '_has_set_default_indent_settings', 0) == 0
+	set shiftwidth=4
+	set smartindent
+	set noexpandtab
+	let g:_has_set_default_indent_settings = 1
+endif
 
 " Visual
 set list listchars=tab:›\ ,trail:·,eol:¬
@@ -63,6 +68,27 @@ let g:ctrlp_custom_ignore = {
 	\ 'dir':  '\v[\/](.git|.hg|.svn|.next|node_modules|dist|build)$'
 \ }
 
+" ack.vim
+nnoremap <Leader>f :Ack!<Space>
+nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+
+" ag (The Silver Searcher)
+" See https://robots.thoughtbot.com/faster-grepping-in-vim
+if executable('ag')
+	" Use ag over grep
+	"set grepprg=ag\ --nogroup\ --nocolor
+	set grepprg=ag
+
+	" Use ag in ack.vim
+	let g:ackprg = 'ag --vimgrep'
+
+	" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+	" ag is fast enough that CtrlP doesn't need to cache
+	let g:ctrlp_use_caching = 0
+endif
+
 " Lightline
 set noshowmode
 set laststatus=2
@@ -73,28 +99,28 @@ let g:lightline = {
 " Lightline Buffer
 set showtabline=2
 let g:lightline = {
-    \ 'tabline': {
-    \   'left': [ [ 'bufferinfo' ],
-    \             [ 'separator' ],
-    \             [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
-    \   'right': [ [ 'close' ], ],
-    \ },
-    \ 'component_expand': {
-    \   'buffercurrent': 'lightline#buffer#buffercurrent',
-    \   'bufferbefore': 'lightline#buffer#bufferbefore',
-    \   'bufferafter': 'lightline#buffer#bufferafter',
-    \ },
-    \ 'component_type': {
-    \   'buffercurrent': 'tabsel',
-    \   'bufferbefore': 'raw',
-    \   'bufferafter': 'raw',
-    \ },
-    \ 'component_function': {
-    \   'bufferinfo': 'lightline#buffer#bufferinfo',
-    \ },
-    \ 'component': {
-    \   'separator': '',
-    \ },
+	\ 'tabline': {
+	\   'left': [ [ 'bufferinfo' ],
+	\             [ 'separator' ],
+	\             [ 'bufferbefore', 'buffercurrent', 'bufferafter' ], ],
+	\   'right': [ [ 'close' ], ],
+	\ },
+	\ 'component_expand': {
+	\   'buffercurrent': 'lightline#buffer#buffercurrent',
+	\   'bufferbefore': 'lightline#buffer#bufferbefore',
+	\   'bufferafter': 'lightline#buffer#bufferafter',
+	\ },
+	\ 'component_type': {
+	\   'buffercurrent': 'tabsel',
+	\   'bufferbefore': 'raw',
+	\   'bufferafter': 'raw',
+	\ },
+	\ 'component_function': {
+	\   'bufferinfo': 'lightline#buffer#bufferinfo',
+	\ },
+	\ 'component': {
+	\   'separator': '',
+	\ },
 \ }
 let g:lightline_buffer_logo = ''
 let g:lightline_buffer_readonly_icon = ''
