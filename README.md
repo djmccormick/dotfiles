@@ -4,15 +4,15 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 
 ### Plugins
 
-- [ctrlp.vim](ctrlpvim/ctrlp.vim), a full path fuzzy file, buffer, mru, tag, ... finder
-- [lightline.vim](itchyny/lightline.vim), a light and configurable statusline/tabline
-- [vim-jsx-pretty](maxmellon/vim-jsx-pretty), React JSX syntax pretty highlighting
 - [ack.vim](mileszs/ack.vim), run your favorite search tool from Vim, with an enhanced results list
+- [ctrlp.vim](ctrlpvim/ctrlp.vim), a full path fuzzy file, buffer, mru, tag, ... finder
 - [jellybeans.vim](nanotech/jellybeans.vim), a colorful, dark color scheme
-- [vim-javascript](pangloss/vim-javascript), vastly improved Javascript indentation and syntax support
+- [lightline-buffer](taohexxx/lightline-buffer), a buffer plugin for lightline.vim
+- [lightline.vim](itchyny/lightline.vim), a light and configurable statusline/tabline
 - [nerdcommenter](scrooloose/nerdcommenter), intensely orgasmic commenting
 - [nerdtree](scrooloose/nerdtree), a tree explorer
-- [lightline-buffer](taohexxx/lightline-buffer), a buffer plugin for lightline.vim
+- [vim-javascript](pangloss/vim-javascript), vastly improved Javascript indentation and syntax support
+- [vim-jsx-pretty](maxmellon/vim-jsx-pretty), React JSX syntax pretty highlighting
 - [vim-sensible](tpope/vim-sensible), defaults everyone can agree on
 - [vim-sleuth](tpope/vim-sleuth), heuristically set buffer options
 
