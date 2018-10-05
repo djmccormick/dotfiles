@@ -4,17 +4,17 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 
 ### Plugins
 
-- [ack.vim](mileszs/ack.vim), run your favorite search tool from Vim, with an enhanced results list
-- [ctrlp.vim](ctrlpvim/ctrlp.vim), a full path fuzzy file, buffer, mru, tag, ... finder
-- [jellybeans.vim](nanotech/jellybeans.vim), a colorful, dark color scheme
-- [lightline-buffer](taohexxx/lightline-buffer), a buffer plugin for lightline.vim
-- [lightline.vim](itchyny/lightline.vim), a light and configurable statusline/tabline
-- [nerdcommenter](scrooloose/nerdcommenter), intensely orgasmic commenting
-- [nerdtree](scrooloose/nerdtree), a tree explorer
-- [vim-javascript](pangloss/vim-javascript), vastly improved Javascript indentation and syntax support
-- [vim-jsx-pretty](maxmellon/vim-jsx-pretty), React JSX syntax pretty highlighting
-- [vim-sensible](tpope/vim-sensible), defaults everyone can agree on
-- [vim-sleuth](tpope/vim-sleuth), heuristically set buffer options
+- [ack.vim](https://github.com/mileszs/ack.vim), run your favorite search tool from Vim, with an enhanced results list
+- [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim), a full path fuzzy file, buffer, mru, tag, ... finder
+- [jellybeans.vim](https://github.com/nanotech/jellybeans.vim), a colorful, dark color scheme
+- [lightline-buffer](https://github.com/taohexxx/lightline-buffer), a buffer plugin for lightline.vim
+- [lightline.vim](https://github.com/itchyny/lightline.vim), a light and configurable statusline/tabline
+- [nerdcommenter](https://github.com/scrooloose/nerdcommenter), intensely orgasmic commenting
+- [nerdtree](https://github.com/scrooloose/nerdtree), a tree explorer
+- [vim-javascript](https://github.com/pangloss/vim-javascript), vastly improved Javascript indentation and syntax support
+- [vim-jsx-pretty](https://github.com/maxmellon/vim-jsx-pretty), React JSX syntax pretty highlighting
+- [vim-sensible](https://github.com/tpope/vim-sensible), defaults everyone can agree on
+- [vim-sleuth](https://github.com/tpope/vim-sleuth), heuristically set buffer options
 
 ### Installation
 
@@ -40,4 +40,4 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 
 ### Additional setup
 
-If you have [The Silver Searcher](ggreer/the_silver_searcher) (also known as `ag`) installed, it'll be used by Ctrl+P and ack.vim for searches. It makes both work faster, so I recommend it.
+If you have [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) (also known as `ag`) installed, it'll be used by Ctrl+P and ack.vim for searches. It makes both work faster, so I recommend it.
