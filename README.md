@@ -40,4 +40,4 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 
 ### Additional setup
 
-If you have [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) (also known as `ag`) installed, it'll be used by Ctrl+P and ack.vim for searches. It makes both work faster, so I recommend it.
+If you have [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) (also known as `ag`) installed, it'll be used by [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) and [ack.vim](https://github.com/mileszs/ack.vim) for searches. It makes both work faster, so I recommend it.
