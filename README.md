@@ -23,7 +23,7 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 
 1. Use git to clone this project:
    ```shell
-   git clone git://github.com/djmccormick/.vim.git ~/Projects/.vim
+   git clone git@github.com:djmccormick/.vim.git ~/Projects/.vim
    ```
 
 1. Create a symlinks for `.vim` and `.vimrc`:
