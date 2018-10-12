@@ -12,6 +12,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'itchyny/lightline.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mileszs/ack.vim'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
@@ -49,7 +50,6 @@ endif
 
 " Visual
 set list listchars=tab:›\ ,trail:·,eol:¬
-set termguicolors
 set background=dark
 color jellybeans
 
