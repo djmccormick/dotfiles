@@ -11,10 +11,12 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 - [lightline.vim](https://github.com/itchyny/lightline.vim), a light and configurable statusline/tabline
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter), intensely orgasmic commenting
 - [nerdtree](https://github.com/scrooloose/nerdtree), a tree explorer
+- [vim-crystal](https://github.com/rhysd/vim-crystal), filetype and tools support for Crystal language
 - [vim-javascript](https://github.com/pangloss/vim-javascript), vastly improved Javascript indentation and syntax support
 - [vim-jsx-pretty](https://github.com/maxmellon/vim-jsx-pretty), React JSX syntax pretty highlighting
 - [vim-sensible](https://github.com/tpope/vim-sensible), defaults everyone can agree on
 - [vim-sleuth](https://github.com/tpope/vim-sleuth), heuristically set buffer options
+- [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode), automatic table creator and formatter
 
 ### Installation
 

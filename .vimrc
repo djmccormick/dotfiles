@@ -9,11 +9,13 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'itchyny/lightline.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mileszs/ack.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
+Plug 'rhysd/vim-crystal'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'taohexxx/lightline-buffer'
