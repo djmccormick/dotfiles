@@ -9,6 +9,7 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 - [jellybeans.vim](https://github.com/nanotech/jellybeans.vim), a colorful, dark color scheme
 - [lightline-buffer](https://github.com/taohexxx/lightline-buffer), a buffer plugin for lightline.vim
 - [lightline.vim](https://github.com/itchyny/lightline.vim), a light and configurable statusline/tabline
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator), seamless navigation between tmux panes and vim splits
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter), intensely orgasmic commenting
 - [nerdtree](https://github.com/scrooloose/nerdtree), a tree explorer
 - [vim-crystal](https://github.com/rhysd/vim-crystal), filetype and tools support for Crystal language
@@ -24,7 +25,7 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 
 1. Use git to clone this project:
    ```shell
-   git clone git://github.com/djmccormick/.vim.git ~/Projects/.vim
+   git clone git@github.com:djmccormick/.vim.git ~/Projects/.vim
    ```
 
 1. Create a symlinks for `.vim` and `.vimrc`:
