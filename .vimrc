@@ -8,12 +8,12 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'itchyny/lightline.vim'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'mileszs/ack.vim'
-Plug 'christoomey/vim-tmux-navigator'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'rhysd/vim-crystal'
@@ -22,6 +22,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'taohexxx/lightline-buffer'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-speeddating'
 call plug#end()
 
 " Files

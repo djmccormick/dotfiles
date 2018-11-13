@@ -9,7 +9,6 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 - [jellybeans.vim](https://github.com/nanotech/jellybeans.vim), a colorful, dark color scheme
 - [lightline-buffer](https://github.com/taohexxx/lightline-buffer), a buffer plugin for lightline.vim
 - [lightline.vim](https://github.com/itchyny/lightline.vim), a light and configurable statusline/tabline
-- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator), seamless navigation between tmux panes and vim splits
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter), intensely orgasmic commenting
 - [nerdtree](https://github.com/scrooloose/nerdtree), a tree explorer
 - [vim-crystal](https://github.com/rhysd/vim-crystal), filetype and tools support for Crystal language
@@ -17,7 +16,9 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 - [vim-jsx-pretty](https://github.com/maxmellon/vim-jsx-pretty), React JSX syntax pretty highlighting
 - [vim-sensible](https://github.com/tpope/vim-sensible), defaults everyone can agree on
 - [vim-sleuth](https://github.com/tpope/vim-sleuth), heuristically set buffer options
+- [vim-speeddating](https://github.com/tpope/vim-speeddating), use CTRL-A/CTRL-X to increment dates, times, and more
 - [vim-table-mode](https://github.com/dhruvasagar/vim-table-mode), automatic table creator and formatter
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator), seamless navigation between tmux panes and vim splits
 
 ### Installation
 
