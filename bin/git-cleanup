@@ -1,0 +1,6 @@
+#!/bin/sh
+
+git checkout master
+git remote update --prune
+git branch -r --merged | grep -v master | grep -v develop | sed -e 's/origin\//:/' | xargs git push origin
+git branch --merged | grep -v master | grep -v develop | xargs git branch -d
