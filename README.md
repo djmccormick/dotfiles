@@ -27,8 +27,7 @@ My personal *nix configuration files using [dotbot](https://github.com/anishatha
 
 1. Run the install script:
    ```shell
-   cd ~/Projects/dotfiles
-   ./install
+   dotfiles/install
    ```
 
 
