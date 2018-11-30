@@ -22,6 +22,7 @@ source $ZSH/oh-my-zsh.sh
 #
 
 [ -f ~/.shrc ] && source ~/.shrc # Load general purpose shell configuration
+[ -f ~/.localshrc ] && source ~/.localshrc # Load local general purpose shell configuration
 
 
 #
