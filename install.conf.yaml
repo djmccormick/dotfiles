@@ -3,8 +3,9 @@
       relink: true
 - clean: ['~']
 - link:
-    ~/bin: bin
+    ~/.shrc: sh/shrc
     ~/.tmux.conf: tmux/tmux.conf
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
-    ~/.shrc: sh/shrc
+    ~/.zshrc: sh/zshrc
+    ~/bin: bin
