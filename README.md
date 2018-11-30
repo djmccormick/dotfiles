@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal *nix configuration files using [dotbot](https://github.com/anishathalye/dotbot) and based on [dotfiles_template](https://github.com/anishathalye/dotfiles_template).
+My personal `*`nix configuration files using [dotbot](https://github.com/anishathalye/dotbot) and based on [dotfiles_template](https://github.com/anishathalye/dotfiles_template).
 
 
 ### Configurations
@@ -14,7 +14,11 @@ My personal *nix configuration files using [dotbot](https://github.com/anishatha
 
 ### Prerequisites
 
-- TBD
+- git
+- vim
+- zsh
+- oh-my-zsh
+- tmux
 
 
 ### Installation
