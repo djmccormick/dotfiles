@@ -54,7 +54,7 @@ endif
 " Visual
 set list listchars=tab:›\ ,trail:·,eol:¬
 set background=dark
-color jellybeans
+silent! color jellybeans
 
 
 "

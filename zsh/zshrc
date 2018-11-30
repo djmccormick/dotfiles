@@ -10,8 +10,8 @@ COMPLETION_WAITING_DOTS="true" # Display red dots while waiting for completion.
 HIST_STAMPS="yyyy-mm-dd" # Change the command execution timestamp shown in the history command output.
 
 plugins=(
-  vi-mode tmux 
-  git git-flow
+  vi-mode vim-interaction
+  tmux git git-flow
 )
 
 source $ZSH/oh-my-zsh.sh

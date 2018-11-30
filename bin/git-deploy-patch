@@ -1,0 +1,19 @@
+#!/bin/sh
+
+git-cleanup
+git checkout develop
+git pull origin develop
+git checkout master
+git pull origin master
+git merge develop
+npm version patch
+git push origin master
+git push --tags
+git checkout develop
+git merge master
+git push origin develop
+git checkout wip
+git pull origin wip
+git merge develop
+git push origin wip
+git checkout develop
