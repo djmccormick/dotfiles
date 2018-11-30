@@ -1,43 +1,36 @@
-# .vim
+# dotfiles
 
-My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-plug) and based on [vim-sensible](https://github.com/tpope/vim-sensible).
+My personal *nix configuration files using [dotbot](https://github.com/anishathalye/dotbot) and based on [dotfiles_template](https://github.com/anishathalye/dotfiles_template).
 
-### Plugins
 
-- [ack.vim](https://github.com/mileszs/ack.vim), run your favorite search tool from Vim, with an enhanced results list
-- [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim), a full path fuzzy file, buffer, mru, tag, ... finder
-- [jellybeans.vim](https://github.com/nanotech/jellybeans.vim), a colorful, dark color scheme
-- [lightline-buffer](https://github.com/taohexxx/lightline-buffer), a buffer plugin for lightline.vim
-- [lightline.vim](https://github.com/itchyny/lightline.vim), a light and configurable statusline/tabline
-- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator), seamless navigation between tmux panes and vim splits
-- [nerdcommenter](https://github.com/scrooloose/nerdcommenter), intensely orgasmic commenting
-- [nerdtree](https://github.com/scrooloose/nerdtree), a tree explorer
-- [vim-javascript](https://github.com/pangloss/vim-javascript), vastly improved Javascript indentation and syntax support
-- [vim-jsx-pretty](https://github.com/maxmellon/vim-jsx-pretty), React JSX syntax pretty highlighting
-- [vim-sensible](https://github.com/tpope/vim-sensible), defaults everyone can agree on
-- [vim-sleuth](https://github.com/tpope/vim-sleuth), heuristically set buffer options
+### Configurations
+
+- [bin](bin): swiss army knife of custom, useful shell scripts
+- [tmux](tmux): tmux configuration using [tpm](https://github.com/tmux-plugins/tpm) and based on [tmux-sensible](https://github.com/tmux-plugins/tmux-sensible) and [spicycode](https://github.com/spicycode)'s [gist](https://gist.github.com/spicycode/1229612)
+- [vim](vim): vim configuration using [vim-plug](https://github.com/junegunn/vim-plug) and based on [vim-sensible](https://github.com/tpope/vim-sensible)
+- [zsh](zsh): zsh configuration using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+
+
+### Prerequisites
+
+- TBD
+
 
 ### Installation
 
-1. If you have your own `.vim/` or `.vimrc` then back them up to a new location.
+1. If you have your own dotfiles or bin folder, then back them up to a new location.
 
 1. Use git to clone this project:
    ```shell
-   git clone git@github.com:djmccormick/.vim.git ~/Projects/.vim
+   git clone git@github.com:djmccormick/dotfiles.git ~/Projects/dotfiles
    ```
 
-1. Create a symlinks for `.vim` and `.vimrc`:
+1. Run the install script:
    ```shell
-   ln -s ~/Projects/.vim ~/.vim
-   ln -s ~/Projects/.vim/.vimrc ~/.vimrc
+   cd ~/Projects/dotfiles
+   ./install
    ```
 
-1. Create `swap` and `undo` directories:
-   ```shell
-   mkdir ~/.vim/swap ~/.vim/undo
-   ```
-
-1. Load up vim, which should automatically download `vim-plug`. You may see some errors since plugins haven't yet been installed. Once vim is going, install all the plugins by typing `:PlugInstall`, and then restart vim.
 
 ### Additional setup
 
