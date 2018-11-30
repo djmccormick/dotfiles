@@ -2,7 +2,7 @@
 # OH MY ZSH
 #
 
-export ZSH="~/.oh-my-zsh" # Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh installation.
 ZSH_THEME="dstufft" # Set name of the theme to load.
 DISABLE_UPDATE_PROMPT="true" # Disable auto-update prompt
 export UPDATE_ZSH_DAYS=7 # How often to auto-update (in days).
