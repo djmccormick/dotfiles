@@ -23,7 +23,7 @@ My personal *nix configuration files using [dotbot](https://github.com/anishatha
 
 1. Use git to clone this project:
    ```shell
-   git clone git@github.com:djmccormick/dotfiles.git ~/Projects/dotfiles
+   git clone git@github.com:djmccormick/dotfiles.git
    ```
 
 1. Run the install script:
