@@ -7,5 +7,5 @@
     ~/.tmux.conf: tmux/tmux.conf
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
-    ~/.zshrc: sh/zshrc
+    ~/.zshrc: zsh/zshrc
     ~/bin: bin
