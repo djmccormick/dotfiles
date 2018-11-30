@@ -12,4 +12,7 @@ cd "${BASEDIR}"
 git submodule update --init --recursive "${DOTBOT_DIR}"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
+
+# Configure vim
 mkdir -p ~/.vim/swap ~/.vim/undo
+vim +PlugInstall +qall
