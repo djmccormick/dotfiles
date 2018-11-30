@@ -6,6 +6,7 @@ My personal *nix configuration files using [dotbot](https://github.com/anishatha
 ### Configurations
 
 - [bin](bin): swiss army knife of custom, useful shell scripts
+- [sh](sh): generic shell configuration
 - [tmux](tmux): tmux configuration using [tpm](https://github.com/tmux-plugins/tpm) and based on [tmux-sensible](https://github.com/tmux-plugins/tmux-sensible) and [spicycode](https://github.com/spicycode)'s [gist](https://gist.github.com/spicycode/1229612)
 - [vim](vim): vim configuration using [vim-plug](https://github.com/junegunn/vim-plug) and based on [vim-sensible](https://github.com/tpope/vim-sensible)
 - [zsh](zsh): zsh configuration using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
