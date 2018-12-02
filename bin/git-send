@@ -3,8 +3,8 @@
 branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 message="${1:-saving progress}"
 
-if [ "$branch" = "master" ] || [ "$branch" = "develop" ] || [ "$branch" = "wip" ]; then
-	message = "[${branch}] ${message}"
+if [ "$branch" != "master" ] && [ "$branch" != "develop" ] && [ "$branch" != "wip" ]; then
+	message="[${branch}] ${message}"
 fi
 
 git add .
