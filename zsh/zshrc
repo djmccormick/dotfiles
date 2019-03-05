@@ -12,6 +12,8 @@ HIST_STAMPS="yyyy-mm-dd" # Change the command execution timestamp shown in the h
 plugins=(
   vi-mode vim-interaction
   tmux git git-flow
+  npm
+  docker docker-compose docker-machine
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -29,10 +31,11 @@ source $ZSH/oh-my-zsh.sh
 # THIRD-PARTY CONFIGURATION
 #
 
-export N_PREFIX="$HOME/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"  # Added by n-install (see http://git.io/n-install-repo).
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '~/Projects/google-cloud-sdk/path.zsh.inc' ]; then . '~/Projects/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '~/Projects/google-cloud-sdk/completion.zsh.inc' ]; then . '~/Projects/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Added by n-install (see http://git.io/n-install-repo).
+export N_PREFIX="$HOME/Projects/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
