@@ -23,6 +23,7 @@ Plug 'taohexxx/lightline-buffer'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Files

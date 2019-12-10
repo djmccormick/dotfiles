@@ -12,6 +12,7 @@ My personal vim configuration using [vim-plug](https://github.com/junegunn/vim-p
 - [nerdcommenter](https://github.com/scrooloose/nerdcommenter), intensely orgasmic commenting
 - [nerdtree](https://github.com/scrooloose/nerdtree), a tree explorer
 - [vim-crystal](https://github.com/rhysd/vim-crystal), filetype and tools support for Crystal language
+- [vim-fugitive](https://github.com/tpope/vim-fugitive), a Git wrapper so awesome, it should be illegal
 - [vim-javascript](https://github.com/pangloss/vim-javascript), vastly improved Javascript indentation and syntax support
 - [vim-jsx-pretty](https://github.com/maxmellon/vim-jsx-pretty), React JSX syntax pretty highlighting
 - [vim-sensible](https://github.com/tpope/vim-sensible), defaults everyone can agree on
