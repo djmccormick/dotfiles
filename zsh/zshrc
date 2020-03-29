@@ -33,3 +33,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Added by n-install (see http://git.io/n-install-repo).
 export N_PREFIX="$HOME/Projects/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
+
+# GPG
+export GPG_TTY=`tty`

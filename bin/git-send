@@ -8,7 +8,7 @@ if [ "$branch" != "HEAD" ] && [ "$branch" != "master" ] && [ "$branch" != "devel
 fi
 
 git add .
-git commit -m "${message}"
+git commit -S -s -m "${message}"
 if [ "$branch" != "HEAD" ]; then
 	git pull origin "${branch}"
 	git push origin "${branch}"
