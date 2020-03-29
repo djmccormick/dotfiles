@@ -19,6 +19,7 @@ My personal `*`nix configuration files using [dotbot](https://github.com/anishat
 - zsh
 - oh-my-zsh
 - tmux
+- gnupg / gpg2
 
 
 ### Installation
