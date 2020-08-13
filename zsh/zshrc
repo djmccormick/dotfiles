@@ -12,6 +12,7 @@ HIST_STAMPS="yyyy-mm-dd" # Change the command execution timestamp shown in the h
 plugins=(
   vi-mode vim-interaction
   tmux git git-flow
+  dotenv
   npm
   docker docker-compose docker-machine
 )
@@ -36,3 +37,9 @@ export N_PREFIX="$HOME/Projects/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH
 
 # GPG
 export GPG_TTY=`tty`
+
+# NPM
+export PATH=$PATH:./node_modules/.bin
+
+# Rust
+export PATH=$PATH:$HOME/.cargo/bin
