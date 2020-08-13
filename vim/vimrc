@@ -20,10 +20,10 @@ Plug 'rhysd/vim-crystal'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'taohexxx/lightline-buffer'
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
-Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Files
@@ -64,12 +64,13 @@ silent! color jellybeans
 
 " NERDTree
 let g:NERDTreeChDirMode=2
+let NERDTreeShowBookmarks=1
 nmap <Leader>n :NERDTreeToggle<CR>
 
 " Ctrl+P
 let g:ctrlp_working_path_mode='ra'
 let g:ctrlp_custom_ignore = {
-	\ 'dir':  '\v[\/](.git|.hg|.svn|.next|node_modules|dist|build)$'
+       \ 'dir':  '\v[\/](.git|.hg|.svn|.next|node_modules|dist|build)$'
 \ }
 
 " ack.vim
