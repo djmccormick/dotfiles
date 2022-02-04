@@ -8,21 +8,37 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'bryanmylee/vim-colorscheme-icons'
+Plug 'chengzeyi/fzf-preview.vim'
 Plug 'dhruvasagar/vim-table-mode'
+Plug 'elixir-editors/vim-elixir'
+Plug 'github/copilot.vim'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'itchyny/lightline.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'maxmellon/vim-jsx-pretty'
-Plug 'mileszs/ack.vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
+Plug 'slashmili/alchemist.vim'
 Plug 'taohexxx/lightline-buffer'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-speeddating'
+Plug 'vim-crystal/vim-crystal'
+Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'jiangmiao/auto-pairs'
+
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
+
+let g:coc_global_extensions = ['coc-tslint-plugin', 'coc-tsserver', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-elixir']
 
 " Files
 set directory=~/.vim/swap//
@@ -40,6 +56,7 @@ set number
 set scrolloff=5
 set smartcase
 set mouse=a
+set updatetime=100
 
 " Indentation defaults (does not override vim-sleuth's indenting detection)
 set tabstop=4
@@ -54,6 +71,8 @@ endif
 set list listchars=tab:›\ ,trail:·,eol:¬
 set background=dark
 silent! color jellybeans
+set encoding=utf-8
+set fillchars=vert:\ ,fold:-,eob:~
 
 
 "
@@ -61,47 +80,52 @@ silent! color jellybeans
 "
 
 " NERDTree
+let NERDTreeMinimalUI=1
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 let g:NERDTreeChDirMode=2
 let NERDTreeShowBookmarks=1
 nmap <Leader>n :NERDTreeToggle<CR>
 
-" Ctrl+P
-let g:ctrlp_working_path_mode='ra'
-let g:ctrlp_custom_ignore = {
-       \ 'dir':  '\v[\/](.git|.hg|.svn|.next|node_modules|dist|build)$'
-\ }
+" 
 
-" ack.vim
-nnoremap <Leader>f :Ack!<Space>
-nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+" fzf
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, {'options': ['--info=inline', '--preview', '~/.vim/plugged/fzf.vim/bin/preview.sh {}']}, <bang>0)
+nnoremap <silent> <C-p> :Files<CR>
+let g:fzf_layout = { 'window': { 'width': 0.90, 'height': 0.90 } }
 
 " ag (The Silver Searcher)
 " See https://robots.thoughtbot.com/faster-grepping-in-vim
 if executable('ag')
 	" Use ag over grep
-	"set grepprg=ag\ --nogroup\ --nocolor
-	set grepprg=ag
+	set grepprg=ag\ --nogroup\ --nocolor
 
 	" Use ag in ack.vim
 	let g:ackprg = 'ag --vimgrep'
-
-	" Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-	" ag is fast enough that CtrlP doesn't need to cache
-	let g:ctrlp_use_caching = 0
 endif
 
 " Lightline
 set noshowmode
 set laststatus=2
-let g:lightline = {
-	\ 'colorscheme': 'jellybeans'
-\ }
 
 " Lightline Buffer
 set showtabline=2
 let g:lightline = {
+	\ 'colorscheme': 'jellybeans',
+	\ 'mode_map': {
+	\   'n' : 'N',
+	\   'i' : 'I',
+	\   'R' : 'R',
+	\   'v' : 'V',
+	\   'V' : 'VL',
+	\   "\<C-v>": 'VB',
+	\   'c' : 'C',
+	\   's' : 'S',
+	\   'S' : 'SL',
+	\   "\<C-s>": 'SB',
+	\   't': 'T',
+	\ },
 	\ 'tabline': {
 	\   'left': [ [ 'bufferinfo' ],
 	\             [ 'separator' ],
@@ -147,3 +171,9 @@ let g:lightline_buffer_reservelen = 20
 
 " vim-jsx
 let g:vim_jsx_pretty_colorful_config=1
+
+" markdown-preview
+let g:mkdp_auto_close = 0
+let vim_markdown_preview_github=1
+let vim_markdown_preview_hotkey='<Leader>p'
+

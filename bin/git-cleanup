@@ -2,5 +2,5 @@
 
 git checkout master
 git remote update --prune
-git branch -r --merged | grep -v master | grep -v develop | grep -v wip | sed -e 's/origin\//:/' | xargs git push origin
-git branch --merged | grep -v master | grep -v develop | grep -v wip | xargs git branch -d
+git branch -r --merged | grep -v main | grep -v master | grep -v develop | sed -e 's/origin\//:/' | xargs git push origin
+git branch --merged | grep -v main | grep -v master | grep -v develop | xargs git branch -d

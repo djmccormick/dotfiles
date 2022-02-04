@@ -3,13 +3,13 @@
 branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 message="${1:-saving progress}"
 
-if [ "$branch" != "HEAD" ] && [ "$branch" != "master" ] && [ "$branch" != "develop" ] && [ "$branch" != "wip" ]; then
-	message="[${branch}] ${message}"
+if [ "$branch" != "HEAD" ] && [ "$branch" != "main" ] && [ "$branch" != "master" ] && [ "$branch" != "develop" ]; then
+    message="${branch} ${message}"
 fi
 
 git add .
-git commit -S -s -m "${message}" --no-verify
+git commit -m "${message}" --no-verify
 if [ "$branch" != "HEAD" ]; then
-	git pull origin "${branch}"
-	git push origin "${branch}"
+    git pull origin "${branch}"
+    git push origin "${branch}"
 fi

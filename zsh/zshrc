@@ -2,10 +2,11 @@
 # OH MY ZSH
 #
 
+zstyle ':omz:update' mode auto
+zstyle ':omz:update' frequency 7
+
 export ZSH=$HOME/.oh-my-zsh # Path to your oh-my-zsh installation.
 ZSH_THEME="dstufft" # Set name of the theme to load.
-DISABLE_UPDATE_PROMPT="true" # Disable auto-update prompt
-export UPDATE_ZSH_DAYS=7 # How often to auto-update (in days).
 COMPLETION_WAITING_DOTS="true" # Display red dots while waiting for completion.
 HIST_STAMPS="yyyy-mm-dd" # Change the command execution timestamp shown in the history command output.
 
@@ -40,6 +41,8 @@ export GPG_TTY=`tty`
 
 # NPM
 export PATH=$PATH:./node_modules/.bin
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+export PATH="/usr/local/sbin:$PATH"
 
-# Rust
-export PATH=$PATH:$HOME/.cargo/bin
+# ALIASES
+alias vim="nvim"

@@ -1,21 +1,14 @@
 #!/bin/sh
 
-issue_prefix="issue-"
 branch=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD)
 message="${1:-saving progress}"
 
-commit_prefix=""
-
-if [[ "$branch" == "$issue_prefix"* ]]; then
-  commit_prefix=${branch#$issue_prefix}
-fi
-
 if [ "$branch" != "HEAD" ] && [ "$branch" != "main" ] && [ "$branch" != "master" ] && [ "$branch" != "develop" ]; then
-    message="#${commit_prefix} ${message}"
+    message="${branch} ${message}"
 fi
 
 git add .
-git commit -S -m "${message}"
+git commit -m "${message}"
 if [ "$branch" != "HEAD" ]; then
     git pull origin "${branch}"
     git push origin "${branch}"
