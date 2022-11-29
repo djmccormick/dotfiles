@@ -1,3 +1,6 @@
+# PATH
+export PATH="/usr/local/sbin:$PATH"
+
 #
 # OH MY ZSH
 #
@@ -36,13 +39,14 @@ source $ZSH/oh-my-zsh.sh
 # Added by n-install (see http://git.io/n-install-repo).
 export N_PREFIX="$HOME/Projects/n"; [[ :$PATH: == *":$N_PREFIX/bin:"* ]] || PATH+=":$N_PREFIX/bin"
 
-# GPG
+# gpg
 export GPG_TTY=`tty`
 
-# NPM
-export PATH=$PATH:./node_modules/.bin
+# npm
+export PATH="./node_modules/.bin:$PATH"
+
+# psql
 export PATH="/usr/local/opt/libpq/bin:$PATH"
-export PATH="/usr/local/sbin:$PATH"
 
 # ALIASES
 alias vim="nvim"

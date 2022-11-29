@@ -2,5 +2,5 @@
 
 git checkout main
 git remote update --prune
-git branch -r --merged | grep -v main | grep -v develop | grep -v channels | sed -e 's/origin\//:/' | xargs git push origin
-git branch --merged | grep -v main | grep -v develop | grep -v channels | xargs git branch -d
+git branch -r --merged | grep -v main | grep -v develop | sed -e 's/origin\//:/' | xargs git push origin
+git branch --merged | grep -v main | grep -v develop | xargs git branch -d
