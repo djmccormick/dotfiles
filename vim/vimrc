@@ -13,7 +13,6 @@ Plug 'bryanmylee/vim-colorscheme-icons'
 Plug 'chengzeyi/fzf-preview.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'elixir-editors/vim-elixir'
-Plug 'github/copilot.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
