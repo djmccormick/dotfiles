@@ -8,7 +8,6 @@
     ~/.shrc: sh/shrc
     ~/.zshrc: zsh/zshrc
     ~/.config/nvim: nvim
-    ~/.vimrc: vim/vimrc
     ~/.tmux.conf: tmux/tmux.conf
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
