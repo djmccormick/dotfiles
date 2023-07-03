@@ -2,12 +2,15 @@
     link:
       relink: true
 - clean: ['~']
+- create:
 - link:
+    ~/bin: bin
     ~/.shrc: sh/shrc
-    ~/.tmux.conf: tmux/tmux.conf
+    ~/.zshrc: zsh/zshrc
     ~/.vim: vim
     ~/.vimrc: vim/vimrc
-    ~/.zshrc: zsh/zshrc
-    ~/bin: bin
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.gnupg/gpg-agent.conf: gnupg/gpg-agent.conf
     ~/.gnupg/gpg.conf: gnupg/gpg.conf
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
