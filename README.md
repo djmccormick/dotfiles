@@ -1,6 +1,6 @@
 # dotfiles
 
-My personal `*`nix configuration files using [dotbot](https://github.com/anishathalye/dotbot) and based on [dotfiles_template](https://github.com/anishathalye/dotfiles_template).
+My personal *nix configuration files using [dotbot](https://github.com/anishathalye/dotbot) and based on [dotfiles_template](https://github.com/anishathalye/dotfiles_template).
 
 
 ### Configurations
@@ -8,18 +8,17 @@ My personal `*`nix configuration files using [dotbot](https://github.com/anishat
 - [bin](bin): swiss army knife of custom, useful shell scripts
 - [sh](sh): generic shell configuration
 - [tmux](tmux): tmux configuration using [tpm](https://github.com/tmux-plugins/tpm) and based on [tmux-sensible](https://github.com/tmux-plugins/tmux-sensible) and [spicycode](https://github.com/spicycode)'s [gist](https://gist.github.com/spicycode/1229612)
-- [vim](vim): vim configuration using [vim-plug](https://github.com/junegunn/vim-plug) and based on [vim-sensible](https://github.com/tpope/vim-sensible)
+- [nvim](nvim): neovim configuration using [nvchad](https://github.com/NvChad/NvChad)
 - [zsh](zsh): zsh configuration using [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 
 ### Prerequisites
 
 - git
-- vim
+- neovim
 - zsh
 - oh-my-zsh
 - tmux
-- gnupg / gpg2
 
 
 ### Installation
@@ -35,8 +34,3 @@ My personal `*`nix configuration files using [dotbot](https://github.com/anishat
    ```shell
    dotfiles/install
    ```
-
-
-### Additional setup
-
-If you have [The Silver Searcher](https://github.com/ggreer/the_silver_searcher) (also known as `ag`) installed, it'll be used by [ctrlp.vim](https://github.com/ctrlpvim/ctrlp.vim) and [ack.vim](https://github.com/mileszs/ack.vim) for searches. It makes both work faster, so I recommend it.
