@@ -2,12 +2,12 @@
     link:
       relink: true
 - clean: ['~']
-- create:
 - link:
     ~/bin: bin
     ~/.shrc: sh/shrc
     ~/.zshrc: zsh/zshrc
     ~/.config/nvim: nvim
+    ~/.config/nvim/lua/custom: nvim-custom
     ~/.tmux.conf: tmux/tmux.conf
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
