@@ -12,12 +12,10 @@ M.treesitter = {
     "c",
     "markdown",
     "markdown_inline",
+    "rust",
   },
   indent = {
     enable = true,
-    -- disable = {
-    --   "python"
-    -- },
   },
 }
 
@@ -37,6 +35,10 @@ M.mason = {
     -- c/cpp stuff
     "clangd",
     "clang-format",
+
+    -- custom stuff
+    "docker-compose-language-service",
+    "dockerfile-language-server",
   },
 }
 

@@ -49,16 +49,25 @@ local plugins = {
 
   {
     'nmac427/guess-indent.nvim',
+    lazy = false,
     config = function()
       require('guess-indent').setup()
     end,
   },
 
   -- To make a plugin not be loaded
-  {
-    "indent-blankline.nvim",
-    enabled = false
-  }
+  -- {
+  --   "NvChad/nvim-colorizer.lua",
+  --   enabled = false
+  -- },
+
+  -- All NvChad plugins are lazy-loaded by default
+  -- For a plugin to be loaded, you will need to set either `ft`, `cmd`, `keys`, `event`, or set `lazy = false`
+  -- If you want a plugin to load on startup, add `lazy = false` to a plugin spec, for example
+  -- {
+  --   "mg979/vim-visual-multi",
+  --   lazy = false,
+  -- }
 }
 
 return plugins

@@ -6,7 +6,7 @@ local highlights = require "custom.highlights"
 
 M.ui = {
   theme = "jellybeans",
-  theme_toggle = { "jellybeans" },
+  theme_toggle = { "jellybeans", "everforest_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
