@@ -5,3 +5,10 @@
 --   pattern = "*",
 --   command = "tabdo wincmd =",
 -- })
+
+-- Customize filetypes
+vim.filetype.add({
+  filename = {
+    ['docker-compose.yaml'] = 'yaml.docker-compose',
+  },
+})

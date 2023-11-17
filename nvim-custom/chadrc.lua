@@ -13,7 +13,7 @@ M.ui = {
 
   statusline = {
     theme = "vscode_colored",
-    separator_style = "block",
+    separator_style = nil,
   },
 
   tabufline = {
