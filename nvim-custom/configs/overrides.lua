@@ -36,6 +36,10 @@ M.mason = {
     "clangd",
     "clang-format",
 
+    -- data science stuff
+    "pylyzer",
+    "r_languageserver",
+
     -- custom stuff
     "docker-compose-language-service",
     "dockerfile-language-server",
