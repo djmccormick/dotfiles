@@ -68,6 +68,14 @@ local plugins = {
     end
   },
 
+  {
+    "jamespeapen/Nvim-R",
+    lazy = false,
+    config = function()
+      vim.g.R_assign = 0;
+    end
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
